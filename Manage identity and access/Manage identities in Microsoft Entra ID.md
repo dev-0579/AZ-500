@@ -31,6 +31,28 @@ Automate user provisioning between your existing Windows Server AD and your clou
 
 
 
+#
+
+#
+
+Which features work in Microsoft Entra ID?
+
+- Application management
+- Authentication
+- Microsoft Entra ID for developers
+- Business-to-Business (B2B)
+- Business-to-Customer (B2C)
+- Conditional Access
+- Device Management
+- Domain services
+- Enterprise users
+- Hybrid identity
+- Identity governance
+- Identity protection
+- Managed identities for Azure resources
+- Privileged identity management (PIM)
+- Monitoring and health	
+--Workload identities	
 
 
 
