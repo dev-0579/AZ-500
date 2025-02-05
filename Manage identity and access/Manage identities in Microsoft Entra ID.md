@@ -52,7 +52,70 @@ Which features work in Microsoft Entra ID?
 - Managed identities for Azure resources
 - Privileged identity management (PIM)
 - Monitoring and health	
---Workload identities	
+- Workload identities	
+
+#
+
+#
+
+Single tenant\
+Azure tenants that access other services in a dedicated environment are considered single tenant.
+
+Multitenant\
+Azure tenants that access other services in a shared environment, across multiple organizations, are considered multitenant.
+
+MSA\
+Microsoft account (Outlook, OneDrive, Xbox LIVE, or Microsoft 365)
+
+
+#
+
+#
+
+#
+
+## Secure Microsoft Entra users
+
+#
+
+#
+
+![image](https://github.com/user-attachments/assets/aab87c69-bc5a-45ff-938f-eff5e1943f4b)
+
+
+
+#
+
+#
+
+**Internal member**: most likely full-time employees in your organization.
+
+**Internal guest**: have account in your tenant, guest-level privileges. Created within your tenant prior to the availability of B2B collaboration.
+
+**External member**: users authenticate using external account, have member access to your tenant. Common in multitenant organizations.
+
+**External guest**: users are true guests of your tenant who authenticate using an external method and who have guest-level privileges
+
+#
+
+#
+
+### Create a new user in Microsoft Entra ID
+
+#
+
+**Identity > Users > All users**
+
+**User principal name**: unique username and select a domain
+
+**Mail nickname**: email nickname that is different from the user principal name you entered, uncheck the **"Derive from user principal name option"**
+
+**Display name**
+
+**Password**
+
+**Account enabled**: This setting was called Block sign in in the legacy create user process.
+
 
 
 
