@@ -112,4 +112,61 @@ Some groups can't be managed in the Azure portal:
 - Distribution lists and mail-enabled security groups are managed only in Exchange admin center or Microsoft 365 admin center.
 
 
+#
+
+#
+
+### How access management in Microsoft Entra ID works
+
+#
+
+![image](https://github.com/user-attachments/assets/90b80b27-0ff3-472f-85ea-2d3dfcf049e5)
+
+
+#
+
+#
+
+Ways to assign access rights
+
+
+- Direct assignment
+
+- Group assignment
+
+- Rule-based assignment
+
+- External authority assignment. Access comes from an external source, such as an on-premises directory or a SaaS app
+
+#
+
+Can users join groups without being assigned?
+
+The group owner can let users find their own groups to join, instead of assigning them
+
+The owner can also set up the group to automatically accept all users that join or to require approval
+
+If you have multiple owners and one of them disapproves, the user is notified, but isn't added to the group
+
+
+#
+
+#
+
+Recommend when to use external identities
+
+- Microsoft Entra B2B
+
+- The partner uses their own identities and credentials, whether or not they have a Microsoft Entra account
+
+For B2B collaboration with other Microsoft Entra organizations, use cross-tenant access settings.
+
+Cross-tenant access settings, you can also trust multi-factor (MFA) and device claims (compliant claims and Microsoft Entra hybrid)
+
+
+
+
+
+
+
 
