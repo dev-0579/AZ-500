@@ -118,6 +118,104 @@ Sign-in features **not natively supported** by Microsoft Entra ID:
 
 
 
+#
+
+#
+
+**Microsoft Entra Conditional Access** require **Microsoft Entra ID P1** licenses.
+
+#
+
+#
+
+### Architecture diagrams
+
+#
+
+#
+
+![image](https://github.com/user-attachments/assets/75102627-2ac5-4b36-9a68-7fabc5906e39)
+
+#
+
+#
+
+![image](https://github.com/user-attachments/assets/161a2582-1b70-4a6d-be3b-657f7bd49ab0)
+
+#
+
+#
+
+![image](https://github.com/user-attachments/assets/3b252478-73dc-41f1-8ff0-e242e11d9758)
+
+#
+
+#
+
+**Recommendations**
+
+High availability and disaster recovery
+
+On-premises outage survival
+
+Identity protection (Microsoft Entra ID Protection with Microsoft Entra ID P2)
+
+
+#
+
+#
+
+#
+
+### Password hash synchronization with Microsoft Entra ID
+
+#
+
+Only new leaked credentials found after enable PHS will be processed against tenant\
+Verifying against previously found credential pairs is not performed
+
+Set up password hash synchronization as a backup if decide to use Federation with Active Directory Federation Services (AD FS) as your sign-in method
+
+To use password hash synchronization in your environment, you need to:
+
+1. Install Microsoft Entra Connect
+2. Configure directory synchronization between your on-premises Active Directory instance and your Microsoft Entra instance
+3. Enable password hash synchronization
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
