@@ -109,8 +109,6 @@ Microsoft account (Outlook, OneDrive, Xbox LIVE, or Microsoft 365)
 Some groups can't be managed in the Azure portal:
 
 - Groups synced from on-premises Active Directory can be managed only in on-premises Active Directory.
-
-
 - Distribution lists and mail-enabled security groups are managed only in Exchange admin center or Microsoft 365 admin center.
 
 
