@@ -74,7 +74,7 @@ Microsoft account (Outlook, OneDrive, Xbox LIVE, or Microsoft 365)
 
 #
 
-## Secure Microsoft Entra users
+### Secure Microsoft Entra users
 
 #
 
@@ -100,23 +100,18 @@ Microsoft account (Outlook, OneDrive, Xbox LIVE, or Microsoft 365)
 
 #
 
-### Create a new user in Microsoft Entra ID
+### Secure Microsoft Entra groups
 
 #
 
-**Identity > Users > All users**
+#
 
-**User principal name**: unique username and select a domain
+Some groups can't be managed in the Azure portal:
 
-**Mail nickname**: email nickname that is different from the user principal name you entered, uncheck the **"Derive from user principal name option"**
-
-**Display name**
-
-**Password**
-
-**Account enabled**: This setting was called Block sign in in the legacy create user process.
+- Groups synced from on-premises Active Directory can be managed only in on-premises Active Directory.
 
 
+- Distribution lists and mail-enabled security groups are managed only in Exchange admin center or Microsoft 365 admin center.
 
 
 
