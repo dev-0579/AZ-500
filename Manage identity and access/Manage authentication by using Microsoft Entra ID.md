@@ -171,7 +171,7 @@ Identity protection (Microsoft Entra ID Protection with Microsoft Entra ID P2)
 
 #
 
-Only new leaked credentials found after enable PHS will be processed against tenant\
+Only **new leaked credentials found** after **enable PHS** will be processed against tenant\
 Verifying against previously found credential pairs is not performed
 
 Set up password hash synchronization as a backup if decide to use Federation with Active Directory Federation Services (AD FS) as your sign-in method
@@ -184,33 +184,115 @@ To use password hash synchronization in your environment, you need to:
 
 
 
+#
+
+#
+
+### Microsoft Entra pass-through authentication
+
+#
+
+Allows your users to sign in to both on-premises and cloud-based applications using the same passwords
+
+#
+
+![image](https://github.com/user-attachments/assets/37f6f9a6-b09e-4563-9b1f-60f1854be5da)
+
+#
+
+You can combine **Pass-through Authentication with the Seamless single sign-on** feature
+
+If you have Windows 10 or later machines, use **Microsoft Entra hybrid join (AADJ)**
 
 
 
+#
+
+#
+
+### Federation with Microsoft Entra ID
+
+#
+
+**Federation is a collection of domains that have established trust**
+
+You can federate your on-premises environment with Microsoft Entra ID and use this federation for authentication and authorization
+
+#
+
+![image](https://github.com/user-attachments/assets/35dd352e-3784-4ba1-9be8-86dca5f1cffd)
+
+#
+
+#
+
+### What is Microsoft Entra authentication?
+
+#
+
+- Self-service password reset
+- Microsoft Entra multifactor authentication
+- Hybrid integration to write password changes back to on-premises environment
+- Hybrid integration to enforce password protection policies for an on-premises environment
+- Passwordless authentication
 
 
+MFA
+
+- Something you know, typically a password.
+- Something you have, such as a trusted device that is not easily duplicated, like a phone or hardware key.
+- Something you are - biometrics like a fingerprint or face scan.
 
 
+#
+
+#
+
+### Passwordless authentication options for Microsoft Entra ID
+
+#
+
+**Microsoft Azure and Azure Government** offer 4 passwordless authentication options that integrate with Microsoft Entra ID
+
+- Windows Hello for Business
+- Microsoft Authenticator
+- Passkeys FIDO2 (Fast IDentity Online 2)
+- Certificate-based authentication
 
 
+#
+
+#
+
+**Windows Hello for Business**
 
 
+![image](https://github.com/user-attachments/assets/395e9cbc-4f90-486f-babd-b016a300ba58)
+
+#
+
+#
+
+![image](https://github.com/user-attachments/assets/c08e7e72-6a68-4270-b733-027eab7dc188)
 
 
+#
 
+#
 
+1. A user signs into Windows using biometric or PIN gesture. The gesture unlocks the Windows Hello for Business private key and is sent to the Cloud Authentication security support provider, referred to as the Cloud AP provider.
 
+2. The Cloud AP provider requests a nonce (a random arbitrary number that can be used just once) from Microsoft Entra ID.
 
+3. Microsoft Entra ID returns a nonce that's valid for 5 minutes.
 
+4. The Cloud AP provider signs the nonce using the user's private key and returns the signed nonce to the Microsoft Entra ID.
 
+5. Microsoft Entra ID validates the signed nonce using the user's securely registered public key against the nonce signature. Microsoft Entra ID validates the signature and then validates the returned signed nonce. When the nonce is validated, Microsoft Entra ID creates a primary refresh token (PRT) with session key that is encrypted to the device's transport key and returns it to the Cloud AP provider. The Cloud AP provider receives the encrypted PRT with session key
 
+6. The Cloud AP provider uses the device's private transport key to decrypt the session key and protects the session key using the device's Trusted Platform Module (TPM).
 
-
-
-
-
-
-
+7. The Cloud AP provider returns a successful authentication response to Windows. The user is then able to access Windows as well as cloud and on-premises applications without the need to authenticate again (SSO).
 
 
 
