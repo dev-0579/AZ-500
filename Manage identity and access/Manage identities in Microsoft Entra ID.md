@@ -218,8 +218,41 @@ External user can access files and apps through the Files tab. The shared channe
 
 #
 
+#
+
+### Implement Microsoft Entra Identity protection
+
+#
+
+![image](https://github.com/user-attachments/assets/617c87f3-870e-4c0f-83a7-f941a355a0a9)
+
+#
+
+Detect risks
+
+Investigate
+
+Automatic remediation
 
 
+#
+
+Required roles
+
+Identity Protection requires users be assigned one or more of the following roles in order to access.
+
+
+**Security Administrator**	Full access to Identity Protection
+
+**Security Operator**	View all Identity Protection reports and Overview, Dismiss user risk, confirm safe sign-in, confirm compromise
+
+**Security Reader**	View all Identity Protection reports and Overview
+
+**Global Reader**	Read-only access to Identity Protection
+
+**User Administrator**	Reset user passwords
+
+Currently, **Security Operator role can't access the Risky sign-ins report**.
 
 
 
