@@ -254,15 +254,36 @@ Identity Protection requires users be assigned one or more of the following role
 
 Currently, **Security Operator role can't access the Risky sign-ins report**.
 
+**Requires Microsoft Entra ID P2 license**
 
 
+#
+
+#
 
 
+Check your knowledge
+
+#
+
+<img width="668" alt="image" src="https://github.com/user-attachments/assets/fb3ed206-bb3c-4e8b-a42d-f34fe6e66bbb" />
 
 
+#
 
+<img width="663" alt="image" src="https://github.com/user-attachments/assets/37513697-b3e5-4c6e-a900-ae85077b4a50" />
 
+#
 
+<img width="668" alt="image" src="https://github.com/user-attachments/assets/7e8d51cd-7690-4f8e-8d69-701aa64fae40" />
+
+#
+
+<img width="668" alt="image" src="https://github.com/user-attachments/assets/7effa0c8-ea7d-4206-b5dd-159330a83b77" />
+
+#
+
+<img width="672" alt="image" src="https://github.com/user-attachments/assets/57d88c05-ff29-4e20-b6b9-aa782a626adb" />
 
 
 
