@@ -295,14 +295,164 @@ MFA
 7. The Cloud AP provider returns a successful authentication response to Windows. The user is then able to access Windows as well as cloud and on-premises applications without the need to authenticate again (SSO).
 
 
+#
+
+#
+
+**Microsoft Authenticator**
+
+Authenticator App turns any iOS or Android phone into a strong, passwordless credential
+
+Authenticator app follows the same basic pattern as Windows Hello for Business
+
+#
+
+![image](https://github.com/user-attachments/assets/abb97cf3-be0a-42b9-abbc-65a5ca105b59)
+
+#
+
+#
+
+1. The user enters their username
+
+2. Microsoft Entra ID detects that the user has a strong credential and starts the Strong Credential flow
+
+3. A notification is sent to the app via Apple Push Notification Service (APNS) on iOS devices, or via Firebase Cloud Messaging (FCM) on Android devices.
+
+4. The user receives the push notification and opens the app
+
+5. The app calls Microsoft Entra ID and receives a proof-of-presence challenge and nonce
+
+6. The user completes the challenge by entering their biometric or PIN to unlock private key
+
+7. The nonce is signed with the private key and sent back to Microsoft Entra ID
+
+8. Microsoft Entra ID performs public/private key validation and returns a token
 
 
+#
+
+#
+
+**Passkeys (FIDO2)**
+
+FIDO (Fast IDentity Online)
+
+Latest standard that incorporates the web authentication (WebAuthn) standard
+
+FIDO2 security keys are an unphishable standards-based passwordless authentication method that can come in any form factor
+
+If you purchase and plan to use NFC-based security keys, you need a supported NFC reader for the security key
+
+The NFC reader isn't an Azure requirement or limitation. Check with the vendor for your NFC-based security key for a list of supported NFC readers
 
 
+#
+
+![image](https://github.com/user-attachments/assets/c1e2eb3b-eb8c-46e8-97f6-ea5412c75a05)
+
+#
+
+#
+
+1. The user plugs the FIDO2 security key into their computer
+2. Windows detects the FIDO2 security key
+3. Windows sends an authentication request
+4. Microsoft Entra ID sends back a nonce
+5. The user completes their gesture to unlock the private key stored in the FIDO2 security key's secure enclave
+6. The FIDO2 security key signs the nonce with the private key
+7. The primary refresh token (PRT) token request with signed nonce is sent to Microsoft Entra ID
+8. Microsoft Entra ID verifies the signed nonce using the FIDO2 public key
+9. Microsoft Entra ID returns PRT to enable access to on-premises resources
 
 
+#
+
+**FIDO2 security key providers**
+
+- Certificate-based authentication (Microsoft Entra CBA)
+- Recommend no more than 20 sets of keys for each passwordless method
 
 
+#
+
+#
+
+### Implement passwordless authentication
+
+#
+
+- Microsoft Authenticator
+- FIDO2-compliant security keys
+- Windows Hello for Business
 
 
+<img width="589" alt="image" src="https://github.com/user-attachments/assets/e4b4fe51-287a-48af-b326-8b2e2069b0ae" />
 
+
+#
+
+#
+
+Requirements
+
+#
+
+<img width="617" alt="image" src="https://github.com/user-attachments/assets/c45dc481-f747-407d-ab0b-4fba9606755f" />
+
+#
+
+#
+
+<img width="617" alt="image" src="https://github.com/user-attachments/assets/547b70bb-6c53-43b5-909f-dcb2376f3874" />
+
+#
+
+#
+
+**Windows Hello for Business**
+
+Prerequisites and deployment paths for Windows Hello for Business are highly dependent on whether you're deploying in 
+
+- on-premises, hybrid, or cloud-only configuration
+- It's also dependent on your device join strategy
+
+
+#
+
+There are three types of passwordless sign-in deployments available with security keys:
+
+1. Microsoft Entra web apps on a supported browser
+2. Microsoft Entra joined Windows 10 devices
+3. Microsoft Entra hybrid joined Windows 10 devices
+
+
+#
+
+#
+
+### Implement password protection
+
+#
+
+**Design principles**
+
+- Domain controllers (DCs) never have to communicate directly with the internet.
+- No new network ports are opened on DCs.
+- No Microsoft Entra Domain Services schema changes are required. The software uses the existing Microsoft Entra domain container and serviceConnectionPoint schema objects.
+- Any supported Microsoft Entra Domain Services domain or forest functional level can be used.
+- The software doesn't create or require accounts in the Microsoft Entra Domain Services domains that it protects.
+- User clear-text passwords never leave the domain controller, either during password validation operations or at any other time.
+- The software isn't dependent on other Microsoft Entra features. For example, Microsoft Entra password hash sync (PHS) isn't related or required for Microsoft Entra Password Protection.
+- Incremental deployment is supported, however the password policy is only enforced where the Domain Controller Agent (DC Agent) is installed.
+
+
+#
+
+#
+
+**Incremental deployment**
+
+Microsoft Entra Password Protection DC agent software can only validate passwords when it's installed on a DC, and only for password changes that are sent to that DC
+
+https://learn.microsoft.com/en-us/training/modules/manage-authentication-microsoft-entra-id/12-enforce-premises-microsoft-entra-password-protection
