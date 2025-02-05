@@ -4,8 +4,15 @@
 - Implement security measures to protect external identities, maintaining confidentiality and integrity.
 - Implement Microsoft Entra ID Protection to proactively identify and respond to identity-related security threats and vulnerabilities.
 
+#
 
-"cloud-based identity and access management service"
+#
+
+### cloud-based identity and access management service
+
+#
+
+#
 
 Automate user provisioning between your existing Windows Server AD and your cloud apps, including Microsoft 365
 
@@ -13,6 +20,9 @@ Automate user provisioning between your existing Windows Server AD and your clou
 - App developers can use Microsoft Entra ID as a standards-based authentication
 - Microsoft 365, Office 365, Azure, or Dynamics CRM Online subscribers already use Microsoft Entra ID
 
+#
+
+#
 
 - Microsoft Entra ID Free
 - Microsoft Entra ID P1
