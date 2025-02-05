@@ -153,7 +153,7 @@ If you have multiple owners and one of them disapproves, the user is notified, b
 
 #
 
-Recommend when to use external identities
+**Recommend when to use external identities**
 
 - Microsoft Entra B2B
 
@@ -162,6 +162,73 @@ Recommend when to use external identities
 For B2B collaboration with other Microsoft Entra organizations, use cross-tenant access settings.
 
 Cross-tenant access settings, you can also trust multi-factor (MFA) and device claims (compliant claims and Microsoft Entra hybrid)
+
+
+#
+
+#
+
+Easily invite guest users from the Azure portal
+
+#
+
+Allow self-service sign-up
+
+#
+
+Let application and group owners manage their own guest users
+
+#
+
+#
+
+### Secure external identities
+
+Microsoft Entra entitlement management, an identity governance feature that lets you manage identity and access for external users
+
+Automating access request workflows, access assignments, reviews, and expiration
+
+#
+
+#
+
+**Workforce tenant configuration** is a standard Microsoft Entra tenant that contains your employees, internal business apps, and other organizational resources. 
+
+In a workforce tenant, your internal users can collaborate with external business partners and guests using B2B collaboration.
+
+**External tenant configuration** is used exclusively for apps you want to publish to consumers or business customers. 
+
+It contains your app registrations and a directory of consumer or customer accounts.
+
+
+#
+
+#
+
+**B2B direct connect**
+
+**Shared channel** owner can search within Teams for allowed users from the external organization and add them to the shared channel.
+
+**External users** access Teams shared channel without having to switch organizations or sign in with a different account. 
+
+External user can access files and apps through the Files tab. The shared channel’s policies determine the user’s access.
+
+
+#
+
+#
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
